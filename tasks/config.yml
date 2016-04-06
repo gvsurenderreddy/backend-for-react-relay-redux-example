@@ -1,0 +1,7 @@
+- name: Configuring logrotate
+  template:
+    src: etc-logrotate.d-docker.j2
+    dest: /etc/logrotate.d/docker
+    owner: root
+    group: root
+    mode: "0644"
