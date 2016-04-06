@@ -1,0 +1,9 @@
+[submodule "wordpress/wp-content/plugins/graphql-wp"]
+	path = wordpress/wp-content/plugins/graphql-wp
+	url = https://github.com/timbofield/graphql-wp
+[submodule "wordpress/vendor/thefold/wordpress-dispatcher"]
+	path = wordpress/vendor/thefold/wordpress-dispatcher
+	url = https://github.com/timbofield/wordpress-dispatcher.git
+[submodule "wordpress/vendor/composer/installers"]
+	path = wordpress/vendor/composer/installers
+	url = https://github.com/composer/installers.git
