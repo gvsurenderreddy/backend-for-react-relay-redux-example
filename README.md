@@ -33,7 +33,7 @@ You can add your own data in wp-admin panel or use the exemplary dataset from `m
 If you have Ansible installed and do not have Docker, Docker Compose and the other needed stuff, then you can run the Ansible playbook:
  - `ansible-playbook playbook/main.yml`
 
-It will install the needed stuff on your host, but you need to have set the following environment variables $DATABASE (database name where Wordpress will be stored) and $PASSWORD (password to db), for instance:
+It will install the needed stuff on your host, but you need to have set the following environment variables `$DATABASE` (database name where Wordpress will be stored) and `$PASSWORD` (password to db), for instance:
  - `export DATABASE=wordpress`
  - `export PASSWORD=test`
 
@@ -42,7 +42,7 @@ It will install the needed stuff on your host, but you need to have set the foll
 If you have Docker and Docker-Compose installed, then you can execute the project using:
  - `docker-compose up`
 
-but you also need to have set $DATABASE and $PASSWORD environment variables. (example above)
+but you also need to have set `$DATABASE` and `$PASSWORD` environment variables. (example above)
 
 If you wish to use the exemplary dataset from `mysql` folder, then:
  - `cd mysql && bash -x load_db.sh`
