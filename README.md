@@ -45,12 +45,14 @@ If you have Docker and Docker-Compose installed, then you can execute the projec
 but you also need to have set `$DATABASE` and `$PASSWORD` environment variables. (example above)
 
 If you wish to use the exemplary dataset from `mysql` folder, then:
- - `cd mysql && bash -x load_db.sh`
+ - `cd mysql`
+ - `bash -x load_db.sh`
 
 ### Backup
 
 If you wish to do a backup of the database, then:
- - `cd mysql && bash -x backup.sh`
+ - `cd mysql`
+ - `bash -x backup.sh`
 
 ### Acknowledgements
 Thanks for @timbofield, who published his work: [graphql-wp](https://github.com/timbofield/graphql-wp)
