@@ -30,16 +30,21 @@
 
 - name: 'Installing Ansible PIP dependencies'
   pip:
-    name: "{{ item }}"
+    name: docker-py
     state: present
-  with_items:
-    - docker-py
-    - docker-compose
 
-- name: 'Downloading bash script to install local-persist driver for Docker'
+- name: 'Installing the release candidate of docker-compose'
   get_url:
-    url: "https://raw.githubusercontent.com/CWSpear/local-persist/master/scripts/install.sh"
-    dest: "/usr/local-persist-install.sh"
+    url: https://github.com/docker/compose/releases/download/1.7.0-rc1/docker-compose-Linux-x86_64
+    dest: /usr/local/bin/docker-compose
 
-- name: "Execute above bash script"
-  command: "bash /usr/local-persist-install.sh --upstart"
+- name: 'Setting docker-compose executable'
+  command: chmod +x /usr/local/bin/docker-compose
+
+- name: 'Downloading a bash script to install local-persist driver for Docker'
+  get_url:
+    url: https://raw.githubusercontent.com/CWSpear/local-persist/master/scripts/install.sh
+    dest: /usr/local-persist-install.sh
+
+- name: "Installing local-persist driver for Docker"
+  command: bash /usr/local-persist-install.sh --upstart

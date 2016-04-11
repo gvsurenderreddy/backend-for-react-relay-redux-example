@@ -4,10 +4,8 @@ services:
   db:
     image: mysql:5.7
     environment:
-      - MYSQL_ROOT_PASSWORD=adrianowski
-      - MYSQL_DATABASE=wordpress
-    volumes:
-     - mysql-data:/var/lib/mysql
+      - MYSQL_ROOT_PASSWORD=$PASSWORD
+      - MYSQL_DATABASE=$DATABASE
 
   wordpress:
     image: wordpress:4.4.2-apache
@@ -19,7 +17,7 @@ services:
      - wordpress-data:/var/www/html
     environment:
      - WORDPRESS_DB_HOST=db:3306
-     - WORDPRESS_DB_PASSWORD=adrianowski
+     - WORDPRESS_DB_PASSWORD=$PASSWORD
 
   phpmyadmin:
       image: phpmyadmin/phpmyadmin
@@ -28,12 +26,7 @@ services:
       ports:
         - "8888:80"
 
-
 volumes:
-  mysql-data:
-    driver: local-persist
-    driver_opts:
-      mountpoint: ${PWD}/mysql
   wordpress-data:
     driver: local-persist
     driver_opts:

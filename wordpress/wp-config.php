@@ -54,7 +54,7 @@ define('DB_USER', 'root');
 
 /** MySQL database password */
 
-define('DB_PASSWORD', 'adrianowski');
+define('DB_PASSWORD', 'test');
 
 
 

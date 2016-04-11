@@ -13,4 +13,4 @@
 - include: run.yml
   tags:
    - docker
-   - docker-compose-run
+   - docker-run
