@@ -9,11 +9,15 @@ The following technologies were used for the sake of simplicity:
  - Ansible - for server provisioning in Vagrant
  - Docker - for containerizing the application
 
+After cloning the project and before its execution, you need to update submodules:
+ - `git submodule init`
+ - `git submodule update`
+
+### Execution
+
 The project facilitates the following urls:
  - `localhost:8000` - for Wordpress
  - `localhost:8888` - for PhpMyAdmin
-
-### Execution
 
 You can use this project in a lot of ways and decide which tool will be your basis:
 
