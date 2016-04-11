@@ -22,6 +22,8 @@ You can use this project in a lot of ways and decide which tool will be your bas
 If you do not have anything installed on your host but Vagrant, then due to server provisioning, the ONLY requirement to run this project is Vagrant and running the following command: 
  - `vagrant up`
 
+It might take some time for running the project at first as all dependencies have to be downloaded, however using Vagrant makes the project executable in Windows, Linux, OSX... (Docker is out-of-the-box only available for some Linux instances).
+
 You can add your own data in wp-admin panel or use the exemplary dataset from `mysql` folder:
  - `vagrant ssh`
  - `cd /vagrant/mysql && bash -x load_db.sh`
