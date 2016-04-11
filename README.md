@@ -1,4 +1,4 @@
-# graphql-wordpress-example
+## backend-for-graphql-wordpress-example
 
 The aim of this repo is to work as a server side for the following project: [react-relay-redux-example](https://github.com/tommyJS/react-relay-redux).
 
