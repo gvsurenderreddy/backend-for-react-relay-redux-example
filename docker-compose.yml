@@ -7,6 +7,8 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=$PASSWORD
       - MYSQL_DATABASE=$DATABASE
+    ports:
+     - "3306:3306"
 
   wordpress:
     image: wordpress:4.4.2-apache
