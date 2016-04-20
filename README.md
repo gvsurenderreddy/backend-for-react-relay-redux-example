@@ -9,11 +9,15 @@ The following technologies were used for the sake of simplicity:
  - Ansible - for server provisioning in Vagrant
  - Docker - for containerizing the application
 
+After cloning the project and before its execution, you need to update submodules:
+ - `git submodule init`
+ - `git submodule update`
+
+### Execution
+
 The project facilitates the following urls:
  - `localhost:8000` - for Wordpress
  - `localhost:8888` - for PhpMyAdmin
-
-### Execution
 
 You can use this project in a lot of ways and decide which tool will be your basis:
 
@@ -45,12 +49,14 @@ If you have Docker and Docker-Compose installed, then you can execute the projec
 but you also need to have set `$DATABASE` and `$PASSWORD` environment variables. (example above)
 
 If you wish to use the exemplary dataset from `mysql` folder, then:
- - `cd mysql && bash -x load_db.sh`
+ - `cd mysql`
+ - `bash -x load_db.sh`
 
 ### Backup
 
 If you wish to do a backup of the database, then:
- - `cd mysql && bash -x backup.sh`
+ - `cd mysql`
+ - `bash -x backup.sh`
 
 ### Acknowledgements
 Thanks for @timbofield, who published his work: [graphql-wp](https://github.com/timbofield/graphql-wp)
