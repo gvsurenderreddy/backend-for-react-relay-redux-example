@@ -5,8 +5,8 @@ services:
     image: mysql:5.7
     container_name: db
     environment:
-      - MYSQL_ROOT_PASSWORD=$PASSWORD
-      - MYSQL_DATABASE=$DATABASE
+      - MYSQL_ROOT_PASSWORD=test
+      - MYSQL_DATABASE=wordpress
     ports:
      - "3306:3306"
 
@@ -20,7 +20,7 @@ services:
      - wordpress-data:/var/www/html
     environment:
      - WORDPRESS_DB_HOST=db:3306
-     - WORDPRESS_DB_PASSWORD=$PASSWORD
+     - WORDPRESS_DB_PASSWORD=test
 
   phpmyadmin:
       image: phpmyadmin/phpmyadmin
